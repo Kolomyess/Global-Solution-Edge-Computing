@@ -1,3 +1,4 @@
+# Global Solution Edge Computing
 ## 😫Descrição do Problema
 As cidades brasileiras enfrentam, com frequência crescente, os impactos negativos de enchentes urbanas causadas por bueiros entupidos. Esse problema, embora pareça simples, tem origem em uma combinação de fatores como o acúmulo de resíduos sólidos descartados irregularmente nas ruas, a falta de manutenção periódica da rede de drenagem e eventos climáticos intensificados pelas mudanças climáticas.
 Quando o lixo — como sacolas plásticas, garrafas, folhas, papéis e outros detritos — é levado pela água da chuva até os bueiros, ele se acumula na entrada ou no interior da tubulação. Com o tempo, isso obstrui o fluxo da água, impedindo que a drenagem funcione corretamente. Como consequência, a água da chuva se acumula nas ruas, causando alagamentos, transtornos no trânsito, danos a imóveis e veículos, além de riscos à saúde pública, como a proliferação de doenças.
