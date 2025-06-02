@@ -17,7 +17,7 @@ Com isso, o Bueiro Inteligente une tecnologia, sustentabilidade e gestão urbana
 Simular o funcionamento de um sistema de monitoramento de bueiro usando sensores para detectar o nível de lixo e enviar alertas, representando o conceito do Bueiro Inteligente.
 
 ## ✅ Componentes Utilizados (no Wokwi)
-Arduino UNO (ou ESP32, se for usar Wi-Fi)
+Arduino UNO
 Sensor Ultrassônico (HC-SR04) – simula o nível da cesta de lixo
 LED Vermelho – indica “cesta cheia”
 LED Verde – indica “cesta vazia/normal”
