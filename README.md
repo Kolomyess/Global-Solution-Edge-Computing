@@ -34,7 +34,7 @@ https://wokwi.com/projects/432582197291678721
 https://youtu.be/JqftFLiNLcc
 
 
-### 👥 Integrantes
+## 👥 Integrantes
 Henrique de Oliveira Gomes
 
 Henrique Kolomyes Silveira
