@@ -1,0 +1,64 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+//Sensor do HC
+#define TRIG 2
+#define ECHO 3
+//LEDS Verde e Vermelho
+#define LED_VERMELHO 4
+#define LED_VERDE 5
+//Buzzer
+#define BUZZER 6
+
+long duracao;
+int distancia;
+
+void setup() {
+  Serial.begin(9600);
+  lcd.init();
+  lcd.backlight();
+
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+  pinMode(LED_VERMELHO, OUTPUT);
+  pinMode(LED_VERDE, OUTPUT);
+  pinMode(BUZZER, OUTPUT);
+}
+
+void loop() {
+  // Leitura do sensor HC
+  digitalWrite(TRIG, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG, LOW);
+
+  duracao = pulseIn(ECHO, HIGH);
+  distancia = duracao * 0.034 / 2;
+
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Cesta:");
+  
+  // Lógica de Processo de verificacao do nosso projeto
+  if (distancia < 10) {
+    lcd.setCursor(0, 1);
+    lcd.print("Status: Cheio");
+    digitalWrite(LED_VERMELHO, HIGH);
+    digitalWrite(LED_VERDE, LOW);
+    digitalWrite(BUZZER, HIGH);  // Buzzer ligado
+  } else {
+    lcd.setCursor(0, 1);
+    lcd.print("Status: Vazio");
+    digitalWrite(LED_VERMELHO, LOW);
+    digitalWrite(LED_VERDE, HIGH);
+    digitalWrite(BUZZER, LOW);   // Buzzer desligado
+  }
+
+  Serial.print("Distancia: ");
+  Serial.print(distancia);
+  Serial.println(" cm");
+
+  delay(3000);
+}
